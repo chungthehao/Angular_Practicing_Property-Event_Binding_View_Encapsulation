@@ -14,4 +14,18 @@
       </ol>
     </div>
   </div>
+
+  <app-game-control 
+    (motGiay)="daMotGiayRoi($event)"></app-game-control>
+
+  <hr>
+
+  <app-even 
+    *ngIf="soGiay !== 0 && soGiay % 2 === 0"
+    [giay]="soGiay"></app-even>
+
+  <app-odd 
+    *ngIf="soGiay % 2 === 1"
+    [giay]="soGiay"></app-odd>
+
 </div>
